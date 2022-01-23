@@ -2,7 +2,7 @@
 name = "balance_domain"
 version = "0.1.3"
 description = "H, hello!"
-long_description = "Hi, hello this long description!"
+long_description = "file: README.md"
 long_description_content_type = "text/markdown"
 authors = ["Calenzo <calenzodevs@gmail.com>"]
 
