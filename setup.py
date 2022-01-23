@@ -8,12 +8,12 @@ EXTRAS = {
     "async": ["aiohttp"],
     "fast_async": ["aiohttp", "cchardet", "aiodns"]
 }
-# VERSION = open(os.path.join(DIRECTORY, "akinator", "VERSION.txt")).read()
+VERSION = subprocess.run(["git", "describe", "--tags"],  stdout=subprocess.PIPE).stdout.decode("utf-8").strip()
 # READ_ME = open(os.path.join(DIRECTORY, "README.rst")).read()
 
 setup(
     name="balance_domain",
-    version="0.1.4",
+    version=VERSION,
     author="Calenzo",
     author_email="henriquecalenzo2018@gmail.com",
     license="MIT License",
