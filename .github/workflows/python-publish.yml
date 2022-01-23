@@ -20,6 +20,12 @@ jobs:
         pip install
         build
         --user
+    - name: Install subprocess
+      run: >-
+        python -m
+        pip install
+        subprocess
+        --user
     - name: Build 🐍
       run: >-
         python -m
