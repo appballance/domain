@@ -3,17 +3,17 @@ import os
 
 DIRECTORY = os.path.dirname(__file__)
 
-REQUIREMENTS = open(os.path.join(DIRECTORY, "REQUIREMENTS.txt")).read().split()
+REQUIREMENTS = open(os.path.join(DIRECTORY, "requirements.txt")).read().split()
 EXTRAS = {
     "async": ["aiohttp"],
     "fast_async": ["aiohttp", "cchardet", "aiodns"]
 }
-VERSION = open(os.path.join(DIRECTORY, "akinator", "VERSION.txt")).read()
+# VERSION = open(os.path.join(DIRECTORY, "akinator", "VERSION.txt")).read()
 # READ_ME = open(os.path.join(DIRECTORY, "README.rst")).read()
 
 setup(
     name="balance_domain",
-    version=VERSION,
+    version="0.1.3",
     author="Calenzo",
     author_email="henriquecalenzo2018@gmail.com",
     license="MIT License",
