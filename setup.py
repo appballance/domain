@@ -13,7 +13,7 @@ EXTRAS = {
 
 setup(
     name="balance_domain",
-    version="0.1.3",
+    version="0.1.4",
     author="Calenzo",
     author_email="henriquecalenzo2018@gmail.com",
     license="MIT License",
