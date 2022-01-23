@@ -1,4 +1,5 @@
 from setuptools import setup
+import subprocess
 import os
 
 DIRECTORY = os.path.dirname(__file__)
