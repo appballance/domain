@@ -1,4 +1,4 @@
-from balance_domain import __version__
+from src.balance_domain import __version__
 
 
 def test_version():
