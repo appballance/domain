@@ -21,6 +21,8 @@ setup(
     long_description="Readme description",
     long_description_content_type="text/x-rst",
     install_requires=REQUIREMENTS,
+    url="https://pypi.org/project/balance-domain",
+    packages=['balance_domain', "tests"],
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
