@@ -22,7 +22,7 @@ setup(
     long_description_content_type="text/x-rst",
     install_requires=REQUIREMENTS,
     url="https://pypi.org/project/balance-domain",
-    package_dir={"": "balance_domain"},
+    package_dir={"balance_domain": "balance_domain"},
     packages=find_packages(where="balance_domain"),
     classifiers=[
         "Programming Language :: Python :: 3.7",
