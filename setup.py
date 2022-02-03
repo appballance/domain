@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import subprocess
 import os
 
@@ -22,7 +22,7 @@ setup(
     long_description_content_type="text/x-rst",
     install_requires=REQUIREMENTS,
     url="https://pypi.org/project/balance-domain",
-    packages=['balance_domain', "tests"],
+    packages=find_packages(where="balance_domain"),
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
