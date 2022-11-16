@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, ARRAY, PickleType
 from sqlalchemy.orm import relationship
 from balance_domain.database.settings import Base
 
@@ -10,6 +10,7 @@ class User(Base):
     surname = Column(String)
     fullname = Column(String)
     email = Column(String, unique=True, index=True)
+    list_banks = ARRAY(PickleType)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
 
