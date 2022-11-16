@@ -15,7 +15,7 @@ setup(
     name="balance_domain",
     version=VERSION,
     author="Calenzo",
-    author_email="henriquecalenzo2018@gmail.com",
+    author_email="calenzodevs@gmail.com",
     license="MIT License",
     description=READ_ME,
     long_description="Readme description",
