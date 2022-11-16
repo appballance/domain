@@ -10,7 +10,7 @@ class User(Base):
     surname = Column(String)
     fullname = Column(String)
     email = Column(String, unique=True, index=True)
-    list_banks = ARRAY(PickleType)
+    list_banks = Column(ARRAY(PickleType), default=[])
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
 
