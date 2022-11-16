@@ -10,7 +10,7 @@ class User(Base):
     surname = Column(String)
     fullname = Column(String)
     email = Column(String, unique=True, index=True)
-    list_banks = Column(ARRAY(PickleType), default=[])
+    list_banks = ARRAY(PickleType)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
 
@@ -20,11 +20,14 @@ class User(Base):
         return vars(self)
 
 
-class Identity(Base):
+class Banks(Base):
     __tablename__ = "identity"
 
     id = Column(Integer, primary_key=True, index=True)
     balance = Column(Integer)
+    token = Column(String)
+    cpf = Column(String)
+    password = Column(String)
     user_id = Column(Integer, ForeignKey("users.id"))
     is_active = Column(Boolean, default=True)
 
