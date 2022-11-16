@@ -32,3 +32,6 @@ class Bank(Base):
     is_active = Column(Boolean, default=True)
 
     user = relationship("User", back_populates="bank")
+
+    def to_json(self):
+        return vars(self)
