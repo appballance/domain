@@ -11,8 +11,8 @@ USERNAME = os.environ["DB_USERNAME"]
 HOSTNAME = os.environ["DB_HOSTNAME"]
 PASSWORD = os.environ["DB_PASSWORD"]
 DATABASE = os.environ["DB_DATABASE"]
+DIALECT = os.environ["DB_DIALECT"]
 PORT = os.environ["DB_PORT"]
-DIALECT = os.environ["DB_PORT"]
 
 SQLALCHEMY_DATABASE_URL = f"{DIALECT}://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}"
 
