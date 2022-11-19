@@ -11,8 +11,10 @@ USERNAME = os.environ["DB_USERNAME"]
 HOSTNAME = os.environ["DB_HOSTNAME"]
 PASSWORD = os.environ["DB_PASSWORD"]
 DATABASE = os.environ["DB_DATABASE"]
+PORT = os.environ["DB_PORT"]
+DIALECT = os.environ["DB_PORT"]
 
-SQLALCHEMY_DATABASE_URL = f"mysql://{USERNAME}:{PASSWORD}@{HOSTNAME}/{DATABASE}"
+SQLALCHEMY_DATABASE_URL = f"{DIALECT}://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL,
                        connect_args={"check_same_thread": False})
