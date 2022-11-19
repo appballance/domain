@@ -1,8 +1,11 @@
 import os
+from dotenv import load_dotenv
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
+load_dotenv()
 
 USERNAME = os.environ["DB_USERNAME"]
 HOSTNAME = os.environ["DB_HOSTNAME"]
