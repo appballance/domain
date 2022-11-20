@@ -17,15 +17,13 @@ PORT = os.environ["DB_PORT"]
 SQLALCHEMY_DATABASE_URL = f"{DIALECT}://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
-
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
 Base = declarative_base()
+Session = sessionmaker(bind=engine)
 
 
 def UserAlchemyAdapter():
-    db = SessionLocal()
+    db = Session()
     try:
-        yield db
+        return db
     finally:
         db.close()
