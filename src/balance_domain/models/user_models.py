@@ -13,7 +13,7 @@ class User(Base):
     hashed_password = Column(String(255))
     is_active = Column(Boolean, default=True)
 
-    bank = relationship("TB_BANK", back_populates="user")
+    bank = relationship("TB_BANK", back_populates="User")
 
     def to_json(self):
         return vars(self)
@@ -27,7 +27,7 @@ class Bank(Base):
     user_id = Column(Integer, ForeignKey("TB_USER.id"))
     is_active = Column(Boolean, default=True)
 
-    user = relationship("TB_USER", back_populates="bank")
+    user = relationship("TB_USER", back_populates="Bank")
 
     def to_json(self):
         return vars(self)
