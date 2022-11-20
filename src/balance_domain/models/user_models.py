@@ -7,11 +7,10 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    surname = Column(String)
-    fullname = Column(String)
-    email = Column(String, unique=True, index=True)
-    list_banks = ARRAY(PickleType)
-    hashed_password = Column(String)
+    surname = Column(String(255))
+    fullname = Column(String(255))
+    email = Column(String(255), unique=True, index=True)
+    hashed_password = Column(String(255))
     is_active = Column(Boolean, default=True)
 
     bank = relationship("Bank", back_populates="user")
@@ -24,10 +23,7 @@ class Bank(Base):
     __tablename__ = "bank"
 
     id = Column(Integer, primary_key=True, index=True)
-    balance = Column(Integer)
-    token = Column(String)
-    cpf = Column(String)
-    password = Column(String)
+    token = Column(String(800))
     user_id = Column(Integer, ForeignKey("users.id"))
     is_active = Column(Boolean, default=True)
 
