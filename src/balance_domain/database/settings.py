@@ -21,9 +21,6 @@ Base = declarative_base()
 Session = sessionmaker(bind=engine)
 
 
-def UserAlchemyAdapter():
-    db = Session()
-    try:
-        return db
-    finally:
-        db.close()
+class ConnectionDatabase:
+    def __init__(self):
+        self.session = Session()
