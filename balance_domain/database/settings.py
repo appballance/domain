@@ -5,8 +5,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from balance_domain.models import user_models
-
 load_dotenv()
 
 USERNAME = os.environ["DB_USERNAME"]
