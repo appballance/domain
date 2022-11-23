@@ -125,3 +125,7 @@ dmypy.json
 .idea
 .DS_Store
 src/.idea
+
+#alembic
+alembic.ini
+alembic
